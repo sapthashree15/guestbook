@@ -16,19 +16,19 @@ spec:
     spec:
       containers:
       - name: analyzer
-        image: us.icr.io/<my_namespace>/analyzer:v1
+        image: us.icr.io/sn-labs-sapthashreek/analyzer:v1
         imagePullPolicy: Always
         resources:
           requests:
             cpu: 100m
             memory: 100Mi
         env:
-        - name: TONE_ANALYZER_API_KEY
+        - name: NLU_SERVICE_API
           valueFrom:
             secretKeyRef:
               name: binding-tone
               key: apikey
-        - name: TONE_ANALYZER_SERVICE_API
+        - name: NLU_SERVICE_API
           valueFrom:
             secretKeyRef:
               name: binding-tone
