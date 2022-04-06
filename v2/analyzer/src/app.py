@@ -90,8 +90,8 @@ POST identity/token method to generate an IAM access token by passing an API key
 @retry(Exception, delay=2, tries=5)
 def generate_tokens(refresh):
 
-	# api_key = os.getenv('NLU_API_KEY')
-	api_key="aI4yamCk4QY_kEckMh8zqv7IH2GmR2mJpj6-mNQ2OEvc"
+	api_key = os.getenv('NLU_API_KEY')
+	# api_key="aI4yamCk4QY_kEckMh8zqv7IH2GmR2mJpj6-mNQ2OEvc"
 
 	params = None
 
@@ -168,8 +168,8 @@ def generate_tokens(refresh):
 if __name__ == '__main__':
 
     PORT = '5000'
-
-    api_url = "https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/417e90df-01b7-4091-9b95-a04b1e2f37cf"
+	
+    api_url = os.getenv('NLU_SERVICE_API')
 
     if not api_url:
         log.error("NLU_SERVICE_API not set")
