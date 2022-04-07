@@ -91,7 +91,7 @@ POST identity/token method to generate an IAM access token by passing an API key
 def generate_tokens(refresh):
 
 	api_key = os.getenv('NLU_API_KEY')
-	# api_key="aI4yamCk4QY_kEckMh8zqv7IH2GmR2mJpj6-mNQ2OEvc"
+	
 
 	params = None
 
