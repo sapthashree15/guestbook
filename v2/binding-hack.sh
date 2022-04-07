@@ -2,8 +2,8 @@
 
 tone_analyzer="Natural Language Understanding-dt"
 
-B64_URL=$(ibmcloud resource service-keys --instance-name "$tone_analyzer" --output json| jq .[5].credentials.url -j | base64 -w 0)
-B64_APIKEY=$(ibmcloud resource service-keys --instance-name "$tone_analyzer" --output json| jq .[5].credentials.apikey -j | base64 -w 0)
+B64_URL=$(ibmcloud resource service-keys --instance-name "$tone_analyzer" --output json| jq .[2].credentials.url -j | base64 -w 0)
+B64_APIKEY=$(ibmcloud resource service-keys --instance-name "$tone_analyzer" --output json| jq .[2].credentials.apikey -j | base64 -w 0)
 
 cat <<EOF | oc apply -f -
 apiVersion: v1
