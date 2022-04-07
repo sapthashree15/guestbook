@@ -6,7 +6,7 @@ import time
 import logging
 from logging import StreamHandler
 from retry import retry
-import urllib.parse
+# import urllib.parse
 
 # Define the base logger
 logging.getLogger("analyzer").setLevel(logging.DEBUG)
