@@ -10,7 +10,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: binding-tone
-  namespace: <my_project>
+  namespace: sn-labs-sapthashreek
 type: Opaque
 data:
   url: $B64_URL
